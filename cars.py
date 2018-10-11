@@ -10,8 +10,9 @@ for car in cars:
         print(car.title())
 
 if 'bmw' in cars:
-    print("Honey, I am home!!")
-elif 'telsa' not in cars:
+    place = cars.index('bmw')
+    print("Honey, I am home in my shiny " + cars[place].upper() + "!!!")
+if 'telsa' not in cars:
     print("We are all going to die")
 else:
     print("you know, you might be doing life wrong")
