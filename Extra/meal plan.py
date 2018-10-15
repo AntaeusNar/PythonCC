@@ -1,27 +1,20 @@
 # attempt at a meal planning app of sorts with the ability to generate a weekly meal plan and
 # ingredients /shopping lists.
-
 # we will need a list of all of the meals, ingrediants of each meal, a main list of all ingrediants, a list of the days
 # of the week
-
 # functions for inputing new meals, buiding meal plans, and building the shopping list
-from typing import Any, Tuple, List
-
+# from typing import Any, Tuple, List
 # days of the week
 # days = ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')
-
-# list for all the meals
-meals = []
-
-
-# dictonary for all the ingredients with the ingredants as the key and the number of meal recipes using the ingredants
-# as the value
+# dictionary for all the ingredients with the ingredients as the key
+# and the number of meal recipes using the ingredients as the value
 # ingredients = {}
-
-# individual meals will be a dictonay with a name and then the ingredients to allow for adding more things later
+# individual meals will be a dictionary with a name and then the ingredients to allow for adding more things later
 # meal = {'name' : '',
 #         'ingredients' : ['', '']
 #        }
+
+import json
 
 
 def new_meal() -> dict:
@@ -51,12 +44,34 @@ def new_meal() -> dict:
             print('Not a very complex meal is it? Not many ingredients that one.')
 
 
-def is_meal_new(meal) -> bool:
-    # when given a meal it will check to see if the meal is in the exciting list
-    if meal not in meals:
-        return True
+def load_meals():   # used to load meals from json file
+    filename = 'meals.json'
+    try:
+        with open(filename) as f_obj:
+            meals = json.load(f_obj)
+    except FileNotFoundError:
+        print('No saved meals found.')
+        return None
+    else:
+        print('Loaded {} meals'.format(len(meals)))
+        for meal in meals:
+            print(meal['name'].title())
+        return meals
 
 
-meals.append(new_meal())
+def save_meals(meals):   # used to save meals to json file
+    filename = 'meals.json'
+    with open(filename, 'w') as f_obj:
+        json.dump(meals, f_obj)
 
-print(meals)
+
+def __main__():
+    mastermeals = []
+    maybemeals = load_meals()
+    if type(maybemeals) == list:
+        mastermeals = maybemeals
+    mastermeals.append(new_meal())
+    save_meals(mastermeals)
+
+
+__main__()
