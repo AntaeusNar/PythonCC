@@ -6,9 +6,8 @@
 # meals stored in a list of dictionaries with a name and and a list of ingredients
 
 
-import json                                 # or saving and loading meals
-from consolemenu import ConsoleMenu         # Main menu options
-from consolemenu.items import FunctionItem  # additional menu options
+import json                            # or saving and loading meals
+from consolemenu import SelectionMenu  # menu
 
 
 class MealList:  # Generate a meal list class holding the methods etc for making stuff happen
@@ -48,4 +47,47 @@ class MealList:  # Generate a meal list class holding the methods etc for making
             self.meals.append(meal)
 
 
-my_meals = MealList('meals.json')
+def main_menu(menu_list):
+    selection = SelectionMenu.get_selection(menu_list, "Meal Planning with Mary Poppins!")
+    return selection
+
+
+def all_done():         # Time to be done
+    return 'exit'
+
+
+def new_meal():         # add that new meal!!
+    return 'fun'
+
+
+def all_meals():        # list all those fine meals!
+    return 'all'
+
+
+def search_meals():     # Hunting for that perfect dish
+    return 'code'
+
+
+def build_plan():       # give me a meal plan!
+    return 'fish'
+
+
+def select_function(selection, switcher_list):
+    # making a list of functions that will be called
+    switcher = dict(enumerate(switcher_list))
+    # now we pull the function from the switcher
+    func = switcher.get(selection)
+    # call the function!!!!!!!!!!
+    return func()
+
+
+def __main__():
+    switcher_list = [new_meal, all_meals, search_meals, build_plan, all_done]
+    menu_list = ["New Meal", "All Meals", "Search Meals", "Build that Meal Plan!"]
+    while True:
+        if select_function(main_menu(menu_list), switcher_list) == 'exit':
+            break
+
+
+__main__()
+
