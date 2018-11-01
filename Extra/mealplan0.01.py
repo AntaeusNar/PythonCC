@@ -1,8 +1,10 @@
-# attempt at a meal planning app of sorts with the ability to generate a weekly meal plan and
+# depriciated 11/1/18
+#
+#  attempt at a meal planning app of sorts with the ability to generate a weekly meal plan and
 # ingredients /shopping lists.
-# we will need a list of all of the meals, ingrediants of each meal, a main list of all ingrediants, a list of the days
+# we will need a list of all of the meals, ingredients of each meal, a main list of all ingrediants, a list of the days
 # of the week
-# functions for inputing new meals, buiding meal plans, and building the shopping list
+# functions for inputting new meals, building meal plans, and building the shopping list
 # from typing import Any, Tuple, List
 # days of the week
 # days = ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')
@@ -15,6 +17,10 @@
 #        }
 
 import json
+from consolemenu import ConsoleMenu
+from consolemenu.items import FunctionItem
+
+
 
 
 def new_meal() -> dict:
@@ -65,13 +71,21 @@ def save_meals(meals):   # used to save meals to json file
         json.dump(meals, f_obj)
 
 
+def build_menu():
+    global mastermeals  # needed to modify mastermeals
+    menu = ConsoleMenu("Meal Planning with Mary!")
+    func_new_meal = FunctionItem("Add a new Meal!", mastermeals.append(new_meal()))
+    func_print_meal = FunctionItem("Print all the meals", )
+
 def __main__():
     mastermeals = []
     maybemeals = load_meals()
     if type(maybemeals) == list:
         mastermeals = maybemeals
-    mastermeals.append(new_meal())
+    build_menu()
+
     save_meals(mastermeals)
 
 
 __main__()
+
