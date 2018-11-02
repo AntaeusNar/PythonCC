@@ -31,12 +31,20 @@ class MealList:  # Generate a meal list class holding the methods etc for making
             json.dump(self.meals, f_obj)
         print('Saved %d meals to file %s' % (len(self.meals), self.mealfile))
 
-    def count(self):
-        return len(self.meals)
+    def count(self):    # This slick son-of-a-bitch opens each meal in the list, counts the ingredients
+                        # and returns a count of the ingredients and total number of meals!!!
+        ing_count = 0
+        all_ing_list = []
+        for each in self.meals:
+            ing_count += len(each['ingredients'])
+            for x in each['ingredients']:
+                if x not in all_ing_list:
+                    all_ing_list.append(x)
+        return len(self.meals), len(all_ing_list), ing_count
 
     def print_all(self):
         for meal in self.meals:
-            print(meal['name'].title)
+            print(meal['name'].title())
 
     def search(self, mealname):  # look for meal in list, return true and list of ingredients
         for meal in self.meals:
@@ -53,8 +61,10 @@ class MealList:  # Generate a meal list class holding the methods etc for making
         meal['ingredients'] = wordslist[1:]
         if not self.search(meal['name']):
             self.meals.append(meal)
+            return True
         else:
-            print('There is a meal with that name already.')
+            # print('There is a meal with that name already.')
+            return False
 
 
 def press_enter():
@@ -74,27 +84,26 @@ def new_meal(these_meals):         # add that new meal!!
     if message != 'b':
         stripedwords = [x.strip() for x in message.split(",")]
         wordslist = [x.lower() for x in stripedwords]
-        if len(wordslist) > 2:
-            reply = 'So you want to add a meal called {} with {} ingredients ' \
-                    'which are\n{} and {}.\n' \
-                    'If so enter "y" otherwise enter "n"\n:' \
-                .format(wordslist[0].title(),
-                        (len(wordslist)-1),
-                        ', '.join(wordslist[1:-1]),
-                        wordslist[-1]
-                        )
-            message = input(reply)
-            if message == 'y':
-                these_meals.new(wordslist)
-                print(these_meals.count())
-        else:
-            print('Not a very complex meal is it? Not many ingredients that one.')
+        reply = 'So you want to add a meal called {} with {} ingredients ' \
+                'which are\n{} and {}.\n' \
+                'If so enter "y" otherwise enter "n"\n:' \
+            .format(wordslist[0].title(),
+                    (len(wordslist)-1),
+                    ', '.join(wordslist[1:-1]),
+                    wordslist[-1]
+                    )
+        message = input(reply)
+        if message == 'y':
+            if these_meals.new(wordslist):
+                return 'Added %s to the list! Now you have %d meals' % (wordslist[0].title(), these_meals.count())
+            else:
+                return "Couldn't add meal, it looks like %s is already in the list." % wordslist[0].title()
 
 
 def all_meals(these_meals):        # list all those fine meals!
     these_meals.print_all()
     press_enter()
-    return 'Listed all %d meals.' % these_meals.count()
+    return 'Listed all %d meals.' % these_meals.count()[0]
 
 
 def search_meals(these_meals, meal):     # Hunting for that perfect dish
@@ -106,7 +115,7 @@ def build_plan(these_meals):       # give me a meal plan!
 
 
 def count_meals(these_meals):
-    return 'Counted %d meals' % these_meals.count()
+    return 'Counted %d meals with %d unique ingredients and %d total ingredients.' % these_meals.count()
 
 
 def select_function(selection, switcher_list, these_meals):
