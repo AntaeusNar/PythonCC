@@ -120,7 +120,7 @@ def new_meal(these_meals):         # add that new meal!!
         message = input(reply)
         if message == 'y':
             if these_meals.new(wordslist):
-                return 'Added %s to the list! Now you have %d meals' % (wordslist[0].title(), these_meals.count())
+                return 'Added %s to the list! Now you have %d meals' % (wordslist[0].title(), these_meals.count()[0])
             else:
                 return "Couldn't add meal, it looks like %s is already in the list." % wordslist[0].title()
 
