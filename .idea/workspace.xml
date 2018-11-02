@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb3ac2be-ab2d-413c-8ad8-04174e687bb9" name="Default Changelist" comment="Moved mealplan files to new meal plan folder, tryied to update">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="bb3ac2be-ab2d-413c-8ad8-04174e687bb9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Extra/mealplan0.01.py" beforeDir="false" afterPath="$PROJECT_DIR$/MealPlan/mealplan0.01.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Extra/mealplan0.02.py" beforeDir="false" afterPath="$PROJECT_DIR$/MealPlan/mealplan0.02.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Extra/meals.json" beforeDir="false" afterPath="$PROJECT_DIR$/MealPlan/meals.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MealPlan/mealplan0.02.py" beforeDir="false" afterPath="$PROJECT_DIR$/MealPlan/mealplan0.02.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,14 +92,14 @@
           <entry key="Python Console" value="27" />
           <entry key="dummy" value="15" />
           <entry key="gitignore" value="26" />
-          <entry key="py" value="12006" />
-          <entry key="txt" value="456" />
+          <entry key="py" value="12192" />
+          <entry key="txt" value="513" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="497" />
-          <entry key="Python" value="12033" />
+          <entry key="PLAIN_TEXT" value="554" />
+          <entry key="Python" value="12219" />
         </counts>
       </usages-collector>
     </session>
@@ -111,52 +108,43 @@
     <splitter split-orientation="horizontal" split-proportion="0.8139535">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/MealPlan/mealplan0.02.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="577">
-                  <caret line="115" column="33" lean-forward="true" selection-start-line="115" selection-start-column="33" selection-end-line="115" selection-end-column="33" />
+                <state relative-caret-position="432">
+                  <caret line="107" column="29" selection-start-line="107" selection-start-column="29" selection-end-line="107" selection-end-column="29" />
                   <folding>
-                    <marker date="1541112440188" expanded="true" signature="528:529" ph="..." />
-                    <marker date="1541112440188" expanded="true" signature="528:532" ph="..." />
-                    <marker date="1541112440188" expanded="true" signature="528:534" ph="..." />
-                    <marker date="1541112440188" expanded="true" signature="528:535" ph="..." />
-                    <marker date="1541112440188" expanded="true" signature="528:539" ph="..." />
-                    <marker date="1541112440188" expanded="true" signature="528:540" ph="..." />
-                    <marker date="1541112440188" expanded="true" signature="528:546" ph="..." />
-                    <marker date="1541112440188" expanded="true" signature="528:548" ph="..." />
-                    <marker date="1541112440188" expanded="true" signature="969:972" ph="..." />
-                    <marker date="1541112440188" expanded="true" signature="969:975" ph="..." />
-                    <marker date="1541112440188" expanded="true" signature="969:977" ph="..." />
-                    <marker date="1541112440188" expanded="true" signature="969:982" ph="..." />
-                    <marker date="1541112440188" expanded="true" signature="969:990" ph="..." />
-                    <marker date="1541112440188" expanded="true" signature="969:992" ph="..." />
-                    <marker date="1541112440188" expanded="true" signature="969:993" ph="..." />
-                    <marker date="1541112440188" expanded="true" signature="1239:1315" ph="..." />
-                    <marker date="1541112440188" expanded="true" signature="1342:1655" ph="..." />
-                    <marker date="1541112440188" expanded="true" signature="1680:1685" ph="..." />
-                    <marker date="1541112440188" expanded="true" signature="1680:1692" ph="..." />
-                    <marker date="1541112440188" expanded="true" signature="1680:1693" ph="..." />
-                    <marker date="1541112440188" expanded="true" signature="1680:1697" ph="..." />
-                    <marker date="1541112440188" expanded="true" signature="1680:1700" ph="..." />
-                    <marker date="1541112440188" expanded="true" signature="1680:1704" ph="..." />
-                    <marker date="1541112440188" expanded="true" signature="1680:1707" ph="..." />
-                    <marker date="1541112440188" expanded="true" signature="1680:1708" ph="..." />
-                    <marker date="1541112440188" expanded="true" signature="1680:1709" ph="..." />
-                    <marker date="1541112440188" expanded="true" signature="1680:1712" ph="..." />
-                    <marker date="1541112440188" expanded="true" signature="2018:4114" ph="..." />
-                    <marker date="1541112440188" expanded="true" signature="2141:3278" ph="..." />
-                    <marker date="1541112440188" expanded="true" signature="3305:3407" ph="..." />
+                    <marker date="1541176648496" expanded="true" signature="528:529" ph="..." />
+                    <marker date="1541176648496" expanded="true" signature="528:532" ph="..." />
+                    <marker date="1541176648496" expanded="true" signature="528:534" ph="..." />
+                    <marker date="1541176648496" expanded="true" signature="528:535" ph="..." />
+                    <marker date="1541176648496" expanded="true" signature="528:539" ph="..." />
+                    <marker date="1541176648496" expanded="true" signature="528:540" ph="..." />
+                    <marker date="1541176648496" expanded="true" signature="528:546" ph="..." />
+                    <marker date="1541176648496" expanded="true" signature="528:548" ph="..." />
+                    <marker date="1541176648496" expanded="true" signature="969:972" ph="..." />
+                    <marker date="1541176648496" expanded="true" signature="969:975" ph="..." />
+                    <marker date="1541176648496" expanded="true" signature="969:977" ph="..." />
+                    <marker date="1541176648496" expanded="true" signature="969:982" ph="..." />
+                    <marker date="1541176648496" expanded="true" signature="969:990" ph="..." />
+                    <marker date="1541176648496" expanded="true" signature="969:992" ph="..." />
+                    <marker date="1541176648496" expanded="true" signature="969:993" ph="..." />
+                    <marker date="1541176648496" expanded="true" signature="1239:1315" ph="..." />
+                    <marker date="1541176648496" expanded="true" signature="1342:1655" ph="..." />
+                    <marker date="1541176648496" expanded="true" signature="1680:1685" ph="..." />
+                    <marker date="1541176648496" expanded="true" signature="1680:1692" ph="..." />
+                    <marker date="1541176648496" expanded="true" signature="1680:1693" ph="..." />
+                    <marker date="1541176648496" expanded="true" signature="1680:1697" ph="..." />
+                    <marker date="1541176648496" expanded="true" signature="1680:1700" ph="..." />
+                    <marker date="1541176648496" expanded="true" signature="1680:1704" ph="..." />
+                    <marker date="1541176648496" expanded="true" signature="1680:1707" ph="..." />
+                    <marker date="1541176648496" expanded="true" signature="1680:1708" ph="..." />
+                    <marker date="1541176648496" expanded="true" signature="1680:1709" ph="..." />
+                    <marker date="1541176648496" expanded="true" signature="1680:1712" ph="..." />
+                    <marker date="1541176648496" expanded="true" signature="2088:4244" ph="..." />
+                    <marker date="1541176648496" expanded="true" signature="2211:3348" ph="..." />
+                    <marker date="1541176648496" expanded="true" signature="3375:3516" ph="..." />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/.gitignore">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="795">
-                  <caret line="106" column="7" selection-start-line="106" selection-start-column="7" selection-end-line="106" selection-end-column="7" />
                 </state>
               </provider>
             </entry>
@@ -217,6 +205,7 @@
         <option value="$PROJECT_DIR$/Extra/mealplan0.01.py" />
         <option value="$PROJECT_DIR$/Extra/mealplan0.02.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/MealPlan/mealplan0.02.py" />
       </list>
     </option>
   </component>
@@ -292,7 +281,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.mealplan0.02">
+  <component name="RunManager" selected="Python.mealplan0.02 (1)">
     <configuration name="TCP Client" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonCC" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -335,27 +324,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="greeter" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="PythonCC" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/greeter.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="meal plan" type="PythonConfigurationType" factoryName="Python">
       <module name="PythonCC" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -369,6 +337,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="C:\Coding\PythonCC2\MealPlan\mealplan0.01.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="mealplan0.02 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PythonCC" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MealPlan" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MealPlan/mealplan0.02.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -421,19 +410,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.meal plan" />
-      <item itemvalue="Python.greeter" />
       <item itemvalue="Python.TCP Sever" />
       <item itemvalue="Python.TCP Client" />
       <item itemvalue="Python.menus" />
       <item itemvalue="Python.mealplan0.02" />
+      <item itemvalue="Python.mealplan0.02 (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.mealplan0.02 (1)" />
         <item itemvalue="Python.mealplan0.02" />
         <item itemvalue="Python.menus" />
         <item itemvalue="Python.TCP Client" />
         <item itemvalue="Python.TCP Sever" />
-        <item itemvalue="Python.greeter" />
       </list>
     </recent_temporary>
   </component>
@@ -476,14 +465,21 @@
       <option name="project" value="LOCAL" />
       <updated>1541110741279</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Moved mealplan to its own folder and updated gitingnore">
+      <created>1541175130039</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1541175130039</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10748156" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10748156" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -546,7 +542,8 @@
     <MESSAGE value="rewrote meal plan as mealplan0.02.py&#10;built out a class for meal list which is just as list of dictonarys(individual meals) and some methods for adding, loading, saving and searching etc." />
     <MESSAGE value="build menu, selections and function switcher from lists!!!!" />
     <MESSAGE value="changed file loading message&#10;changed file saving message&#10;built out new_meal" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed file loading message&#10;changed file saving message&#10;built out new_meal" />
+    <MESSAGE value="Moved mealplan to its own folder and updated gitingnore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved mealplan to its own folder and updated gitingnore" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/name_cases.py">
@@ -663,49 +660,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MealPlan/mealplan0.02.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="115" column="33" lean-forward="true" selection-start-line="115" selection-start-column="33" selection-end-line="115" selection-end-column="33" />
-          <folding>
-            <marker date="1541112440188" expanded="true" signature="528:529" ph="..." />
-            <marker date="1541112440188" expanded="true" signature="528:532" ph="..." />
-            <marker date="1541112440188" expanded="true" signature="528:534" ph="..." />
-            <marker date="1541112440188" expanded="true" signature="528:535" ph="..." />
-            <marker date="1541112440188" expanded="true" signature="528:539" ph="..." />
-            <marker date="1541112440188" expanded="true" signature="528:540" ph="..." />
-            <marker date="1541112440188" expanded="true" signature="528:546" ph="..." />
-            <marker date="1541112440188" expanded="true" signature="528:548" ph="..." />
-            <marker date="1541112440188" expanded="true" signature="969:972" ph="..." />
-            <marker date="1541112440188" expanded="true" signature="969:975" ph="..." />
-            <marker date="1541112440188" expanded="true" signature="969:977" ph="..." />
-            <marker date="1541112440188" expanded="true" signature="969:982" ph="..." />
-            <marker date="1541112440188" expanded="true" signature="969:990" ph="..." />
-            <marker date="1541112440188" expanded="true" signature="969:992" ph="..." />
-            <marker date="1541112440188" expanded="true" signature="969:993" ph="..." />
-            <marker date="1541112440188" expanded="true" signature="1239:1315" ph="..." />
-            <marker date="1541112440188" expanded="true" signature="1342:1655" ph="..." />
-            <marker date="1541112440188" expanded="true" signature="1680:1685" ph="..." />
-            <marker date="1541112440188" expanded="true" signature="1680:1692" ph="..." />
-            <marker date="1541112440188" expanded="true" signature="1680:1693" ph="..." />
-            <marker date="1541112440188" expanded="true" signature="1680:1697" ph="..." />
-            <marker date="1541112440188" expanded="true" signature="1680:1700" ph="..." />
-            <marker date="1541112440188" expanded="true" signature="1680:1704" ph="..." />
-            <marker date="1541112440188" expanded="true" signature="1680:1707" ph="..." />
-            <marker date="1541112440188" expanded="true" signature="1680:1708" ph="..." />
-            <marker date="1541112440188" expanded="true" signature="1680:1709" ph="..." />
-            <marker date="1541112440188" expanded="true" signature="1680:1712" ph="..." />
-            <marker date="1541112440188" expanded="true" signature="2018:4114" ph="..." />
-            <marker date="1541112440188" expanded="true" signature="2141:3278" ph="..." />
-            <marker date="1541112440188" expanded="true" signature="3305:3407" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="795">
           <caret line="106" column="7" selection-start-line="106" selection-start-column="7" selection-end-line="106" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MealPlan/mealplan0.02.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="107" column="29" selection-start-line="107" selection-start-column="29" selection-end-line="107" selection-end-column="29" />
+          <folding>
+            <marker date="1541176648496" expanded="true" signature="528:529" ph="..." />
+            <marker date="1541176648496" expanded="true" signature="528:532" ph="..." />
+            <marker date="1541176648496" expanded="true" signature="528:534" ph="..." />
+            <marker date="1541176648496" expanded="true" signature="528:535" ph="..." />
+            <marker date="1541176648496" expanded="true" signature="528:539" ph="..." />
+            <marker date="1541176648496" expanded="true" signature="528:540" ph="..." />
+            <marker date="1541176648496" expanded="true" signature="528:546" ph="..." />
+            <marker date="1541176648496" expanded="true" signature="528:548" ph="..." />
+            <marker date="1541176648496" expanded="true" signature="969:972" ph="..." />
+            <marker date="1541176648496" expanded="true" signature="969:975" ph="..." />
+            <marker date="1541176648496" expanded="true" signature="969:977" ph="..." />
+            <marker date="1541176648496" expanded="true" signature="969:982" ph="..." />
+            <marker date="1541176648496" expanded="true" signature="969:990" ph="..." />
+            <marker date="1541176648496" expanded="true" signature="969:992" ph="..." />
+            <marker date="1541176648496" expanded="true" signature="969:993" ph="..." />
+            <marker date="1541176648496" expanded="true" signature="1239:1315" ph="..." />
+            <marker date="1541176648496" expanded="true" signature="1342:1655" ph="..." />
+            <marker date="1541176648496" expanded="true" signature="1680:1685" ph="..." />
+            <marker date="1541176648496" expanded="true" signature="1680:1692" ph="..." />
+            <marker date="1541176648496" expanded="true" signature="1680:1693" ph="..." />
+            <marker date="1541176648496" expanded="true" signature="1680:1697" ph="..." />
+            <marker date="1541176648496" expanded="true" signature="1680:1700" ph="..." />
+            <marker date="1541176648496" expanded="true" signature="1680:1704" ph="..." />
+            <marker date="1541176648496" expanded="true" signature="1680:1707" ph="..." />
+            <marker date="1541176648496" expanded="true" signature="1680:1708" ph="..." />
+            <marker date="1541176648496" expanded="true" signature="1680:1709" ph="..." />
+            <marker date="1541176648496" expanded="true" signature="1680:1712" ph="..." />
+            <marker date="1541176648496" expanded="true" signature="2088:4244" ph="..." />
+            <marker date="1541176648496" expanded="true" signature="2211:3348" ph="..." />
+            <marker date="1541176648496" expanded="true" signature="3375:3516" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

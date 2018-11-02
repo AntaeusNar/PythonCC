@@ -57,6 +57,10 @@ class MealList:  # Generate a meal list class holding the methods etc for making
             print('There is a meal with that name already.')
 
 
+def press_enter():
+    input("Please Press Enter to continue.....")
+
+
 def all_done(these_meals):         # Time to be done
     these_meals.save()
     return 'exit'
@@ -89,7 +93,8 @@ def new_meal(these_meals):         # add that new meal!!
 
 def all_meals(these_meals):        # list all those fine meals!
     these_meals.print_all()
-    return 'Listed all the meals.'
+    press_enter()
+    return 'Listed all %d meals.' % these_meals.count()
 
 
 def search_meals(these_meals, meal):     # Hunting for that perfect dish
@@ -101,7 +106,7 @@ def build_plan(these_meals):       # give me a meal plan!
 
 
 def count_meals(these_meals):
-    print(these_meals.count())
+    return 'Counted %d meals' % these_meals.count()
 
 
 def select_function(selection, switcher_list, these_meals):
