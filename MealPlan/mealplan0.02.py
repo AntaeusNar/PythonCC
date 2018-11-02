@@ -33,14 +33,35 @@ class MealList:  # Generate a meal list class holding the methods etc for making
 
     def count(self):    # This slick son-of-a-bitch opens each meal in the list, counts the ingredients
                         # and returns a count of the ingredients and total number of meals!!!
-        ing_count = 0
-        all_ing_list = []
-        for each in self.meals:
-            ing_count += len(each['ingredients'])
-            for x in each['ingredients']:
-                if x not in all_ing_list:
-                    all_ing_list.append(x)
-        return len(self.meals), len(all_ing_list), ing_count
+        # ing_count = 0
+        # all_ing_list = []
+        # for each in self.meals:
+        #     ing_count += len(each['ingredients'])
+        #     for x in each['ingredients']:
+        #         if x not in all_ing_list:
+        #             all_ing_list.append(x)
+        # return len(self.meals), len(all_ing_list), ing_count
+        return len(self.meals), len(self.ing_list()), 42
+
+    def ing_list(self, plan=[]):    # returns a dic of all ingredients with number of times used,
+                                    # if passed a meal list, will only pull those relevant ingredients
+        ing_dic = {}
+        if not plan:
+            for each in self.meals:
+                for x in each['ingredients']:
+                    if x not in ing_dic:
+                        ing_dic[x] = 1
+                    else:
+                        ing_dic[x] += 1
+        else:
+            for each in plan:
+                if each in self.meals:
+                    for x in each['ingredients']:
+                        if x not in ing_dic:
+                            ing_dic[x] = 1
+                        else:
+                            ing_dic[x] += 1
+        return ing_dic
 
     def print_all(self):
         for meal in self.meals:
