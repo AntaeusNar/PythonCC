@@ -63,12 +63,14 @@ class MealList:  # Generate a meal list class holding the methods etc for making
             print(meal['name'].title())
 
     def search(self, mealname):  # look for meal in list, return true and list of ingredients
+        isadded = False
         for meal in self.meals:
             if meal['name'] == mealname:
                 isadded = True
                 ingredients = meal['ingredients']
                 return isadded, ingredients
-        isadded = False
+            else:
+                isadded = False
         return isadded
 
     def new(self, wordslist):  # Add a new meal to meals list
@@ -81,6 +83,13 @@ class MealList:  # Generate a meal list class holding the methods etc for making
         else:
             # print('There is a meal with that name already.')
             return False
+
+    def remove(self, meal):     # remove meal
+        try:
+            removed = self.meals.pop(meal)
+            return '%s found and removed' % removed['name'].title()
+        except IndexError:
+            return '%s was not found.' % meal.title()
 
 
 def press_enter():
@@ -122,8 +131,13 @@ def all_meals(these_meals):        # list all those fine meals!
     return 'Listed all %d meals.' % these_meals.count()[0]
 
 
-def search_meals(these_meals, meal):     # Hunting for that perfect dish
-    return 'code'
+def search_meals(these_meals):     # Hunting for that perfect dish
+    prompt = 'Which meal do you want to try to find?"'
+    meal = input(prompt).lower().strip()
+    if these_meals.search(meal):
+        return 'We found %s in the meal list! It is made with %s' % (meal.title(), ', '.join(these_meals.search(meal)[1]).title())
+    else:
+        return "We couldn't find %s in the meal list." % meal.title()
 
 
 def build_plan(these_meals):       # give me a meal plan!
@@ -132,6 +146,9 @@ def build_plan(these_meals):       # give me a meal plan!
 
 def count_meals(these_meals):
     return 'Counted %d meals with %d unique ingredients and %d total ingredients.' % these_meals.count()
+
+def plan_testing(these_meals):      # var testing stuff
+    return 'crap'
 
 
 def select_function(selection, switcher_list, these_meals):
@@ -144,14 +161,17 @@ def select_function(selection, switcher_list, these_meals):
 
 
 def main_menu(menu_list, status):
-    selection = SelectionMenu.get_selection(menu_list, "Meal Planning with Mary Poppins!", subtitle=status)
+    menu = SelectionMenu(menu_list, "Meal Planning with Mary Poppins", prologue_text=status)
+    menu.show()
+    menu.join()
+    selection = menu.selected_option
     return selection
 
 
 def __main__():
     these_meals = MealList('meals.json')
-    switcher_list = [new_meal, all_meals, search_meals, build_plan, count_meals, all_done]
-    menu_list = ["New Meal", "All Meals", "Search Meals", "Build that Meal Plan!", "How many meals now?"]
+    switcher_list = [new_meal, all_meals, search_meals, build_plan, count_meals, plan_testing, all_done]
+    menu_list = ["New Meal", "All Meals", "Search Meals", "Build that Meal Plan!", "How many meals now?", "Meal Plan Test"]
     status = "Just getting started!"
     while True:
         status = select_function(main_menu(menu_list, status), switcher_list, these_meals)
