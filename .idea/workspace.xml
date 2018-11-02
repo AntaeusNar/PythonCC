@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb3ac2be-ab2d-413c-8ad8-04174e687bb9" name="Default Changelist" comment="">
+    <list default="true" id="bb3ac2be-ab2d-413c-8ad8-04174e687bb9" name="Default Changelist" comment="added a press enter to continue function&#10;refactored a few functions">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MealPlan/mealplan0.02.py" beforeDir="false" afterPath="$PROJECT_DIR$/MealPlan/mealplan0.02.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +75,7 @@
           <entry key="INSTALLER" value="1" />
           <entry key="METADATA" value="1" />
           <entry key="cfg" value="1" />
-          <entry key="gitignore" value="1" />
+          <entry key="gitignore" value="2" />
           <entry key="json" value="3" />
           <entry key="py" value="21" />
         </counts>
@@ -83,7 +83,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="3" />
-          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="PLAIN_TEXT" value="5" />
           <entry key="Python" value="21" />
         </counts>
       </usages-collector>
@@ -91,14 +91,14 @@
         <counts>
           <entry key="Python Console" value="27" />
           <entry key="dummy" value="15" />
-          <entry key="gitignore" value="26" />
+          <entry key="gitignore" value="27" />
           <entry key="py" value="12192" />
-          <entry key="txt" value="513" />
+          <entry key="txt" value="600" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="554" />
+          <entry key="PLAIN_TEXT" value="642" />
           <entry key="Python" value="12219" />
         </counts>
       </usages-collector>
@@ -108,7 +108,7 @@
     <splitter split-orientation="horizontal" split-proportion="0.8139535">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/MealPlan/mealplan0.02.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="432">
@@ -145,6 +145,15 @@
                     <marker date="1541176648496" expanded="true" signature="2211:3348" ph="..." />
                     <marker date="1541176648496" expanded="true" signature="3375:3516" ph="..." />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="795">
+                  <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
                 </state>
               </provider>
             </entry>
@@ -204,8 +213,8 @@
         <option value="$PROJECT_DIR$/Extra/mealplan.py" />
         <option value="$PROJECT_DIR$/Extra/mealplan0.01.py" />
         <option value="$PROJECT_DIR$/Extra/mealplan0.02.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/MealPlan/mealplan0.02.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -472,14 +481,21 @@
       <option name="project" value="LOCAL" />
       <updated>1541175130039</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added a press enter to continue function&#10;refactored a few functions">
+      <created>1541177693521</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1541177693521</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10748156" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10748156" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -543,7 +559,8 @@
     <MESSAGE value="build menu, selections and function switcher from lists!!!!" />
     <MESSAGE value="changed file loading message&#10;changed file saving message&#10;built out new_meal" />
     <MESSAGE value="Moved mealplan to its own folder and updated gitingnore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved mealplan to its own folder and updated gitingnore" />
+    <MESSAGE value="added a press enter to continue function&#10;refactored a few functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="added a press enter to continue function&#10;refactored a few functions" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/name_cases.py">
@@ -660,13 +677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="106" column="7" selection-start-line="106" selection-start-column="7" selection-end-line="106" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MealPlan/mealplan0.02.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -703,6 +713,13 @@
             <marker date="1541176648496" expanded="true" signature="2211:3348" ph="..." />
             <marker date="1541176648496" expanded="true" signature="3375:3516" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
         </state>
       </provider>
     </entry>
