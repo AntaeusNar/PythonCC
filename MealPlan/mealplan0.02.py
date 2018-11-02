@@ -31,6 +31,13 @@ class MealList:  # Generate a meal list class holding the methods etc for making
             json.dump(self.meals, f_obj)
         print('Saved %d meals to file %s' % (len(self.meals), self.mealfile))
 
+    def count(self):
+        return len(self.meals)
+
+    def print_all(self):
+        for meal in self.meals:
+            print(meal['name'].title)
+
     def search(self, mealname):  # look for meal in list, return true and list of ingredients
         for meal in self.meals:
             if meal['name'] == mealname:
@@ -44,8 +51,10 @@ class MealList:  # Generate a meal list class holding the methods etc for making
         meal = {'name': '', 'ingredients': []}  # dictionary of a meal
         meal['name'] = wordslist[0]
         meal['ingredients'] = wordslist[1:]
-        if self.search(meal['name']):
+        if not self.search(meal['name']):
             self.meals.append(meal)
+        else:
+            print('There is a meal with that name already.')
 
 
 def all_done(these_meals):         # Time to be done
@@ -73,12 +82,14 @@ def new_meal(these_meals):         # add that new meal!!
             message = input(reply)
             if message == 'y':
                 these_meals.new(wordslist)
+                print(these_meals.count())
         else:
             print('Not a very complex meal is it? Not many ingredients that one.')
 
 
 def all_meals(these_meals):        # list all those fine meals!
-    return 'all'
+    these_meals.print_all()
+    return 'Listed all the meals.'
 
 
 def search_meals(these_meals, meal):     # Hunting for that perfect dish
@@ -87,6 +98,10 @@ def search_meals(these_meals, meal):     # Hunting for that perfect dish
 
 def build_plan(these_meals):       # give me a meal plan!
     return 'fish'
+
+
+def count_meals(these_meals):
+    print(these_meals.count())
 
 
 def select_function(selection, switcher_list, these_meals):
@@ -98,17 +113,19 @@ def select_function(selection, switcher_list, these_meals):
     return func(these_meals)
 
 
-def main_menu(menu_list):
-    selection = SelectionMenu.get_selection(menu_list, "Meal Planning with Mary Poppins!")
+def main_menu(menu_list, status):
+    selection = SelectionMenu.get_selection(menu_list, "Meal Planning with Mary Poppins!", subtitle=status)
     return selection
 
 
 def __main__():
     these_meals = MealList('meals.json')
-    switcher_list = [new_meal, all_meals, search_meals, build_plan, all_done]
-    menu_list = ["New Meal", "All Meals", "Search Meals", "Build that Meal Plan!"]
+    switcher_list = [new_meal, all_meals, search_meals, build_plan, count_meals, all_done]
+    menu_list = ["New Meal", "All Meals", "Search Meals", "Build that Meal Plan!", "How many meals now?"]
+    status = "Just getting started!"
     while True:
-        if select_function(main_menu(menu_list), switcher_list, these_meals) == 'exit':
+        status = select_function(main_menu(menu_list, status), switcher_list, these_meals)
+        if status == 'exit':
             break
 
 
