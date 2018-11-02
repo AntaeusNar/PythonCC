@@ -7,6 +7,7 @@
 
 
 import json                            # or saving and loading meals
+import random                          # add that random!!!!
 from consolemenu import SelectionMenu  # menu
 
 
@@ -141,7 +142,13 @@ def search_meals(these_meals):     # Hunting for that perfect dish
 
 
 def build_plan(these_meals):       # give me a meal plan!
-    return 'fish'
+    those_meals = these_meals
+    random.shuffle(those_meals.meals)
+    names = []
+    for x in those_meals.meals[0:8]:
+        names.append(x['name'])
+    return 'Here is a list of meals for you! %s' % ', '.join(names).title()
+
 
 
 def count_meals(these_meals):
