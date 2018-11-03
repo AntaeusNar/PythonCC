@@ -50,14 +50,15 @@ class MealList:  # Generate a meal list class holding the methods etc for making
                     else:
                         ing_dic[x] += 1
         else:
-            for each in plan:
-                if each in self.meals:
-                    for x in each['ingredients']:
-                        ing_count += 1
-                        if x not in ing_dic:
-                            ing_dic[x] = 1
-                        else:
-                            ing_dic[x] += 1
+            for meal in self.meals:
+                for y in plan:
+                    if meal['name'] == y:
+                        for x in meal['ingredients']:
+                            ing_count += 1
+                            if x not in ing_dic:
+                                ing_dic[x] = 1
+                            else:
+                                ing_dic[x] += 1
         return ing_dic, ing_count
 
     def print_all(self):
@@ -148,12 +149,21 @@ def build_plan(these_meals):       # give me a meal plan!
     names = []
     for x in those_meals.meals[0:8]:
         names.append(x['name'])
-    return 'Here is a list of meals for you! %s' % ', '.join(names).title()
-
+    shop_list = those_meals.ing_list(names)[0]
+    print(shop_list)
+    new_shop_list = []
+    for x, y in shop_list.items():
+        string = x.title() + '(' + str(y) + ')'
+        new_shop_list.append(string)
+    return 'Here is a list of meals for you! %s.  Ingredients you need are %s' % (
+        ', '.join(names).title(),
+        ', '.join(new_shop_list)
+        )
 
 
 def count_meals(these_meals):
     return 'Counted %d meals with %d unique ingredients and %d total ingredients.' % these_meals.count()
+
 
 def plan_testing(these_meals):      # var testing stuff
     return 'crap'
